@@ -1,0 +1,6 @@
+build
+CMakeLists.txt
+cmake_install.cmake
+CMakeFiles
+CMakeCache.txt
+sdl2-tetris

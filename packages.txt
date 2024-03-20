@@ -1,0 +1,5 @@
+libsdl2
+libsdl2-ttf
+
+libsdl2-dev
+libsdl2-dev-ttf
