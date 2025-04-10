@@ -1,5 +1,2 @@
-libsdl2
-libsdl2-ttf
-
-libsdl2-dev
-libsdl2-dev-ttf
+sudo apt-get install libsdl2-ttf-dev libsdl2-ttf libsdl2-dev-ttf libsdl2-2.0-0 -y;
+gcc tetris.c -o tetris.out `sdl2-config --cflags --libs` -lSDL2 -lSDL2_ttf

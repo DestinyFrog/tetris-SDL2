@@ -40,30 +40,35 @@ Vector2 L[4] = {
 	{ 0, 1 },
 	{ 1, 1 }
 };
+
 Vector2 I[4] = {
 	{ 0, -1 },
 	{ 0, 0 },
 	{ 0, 1 },
 	{ 0, 2 }
 };
+
 Vector2 Q[4] = {
 	{ 0, 0 },
 	{ 1, 0 },
 	{ 0, 1 },
 	{ 1, 1 }
 };
+
 Vector2 T[4] = {
 	{ -1, 0 },
 	{ 0, -1 },
 	{ 0, 0 },
 	{ 1, 0 }
 };
+
 Vector2 S[4] = {
 	{ -1, 1 },
 	{ 0, 1 },
 	{ 0, 0 },
 	{ 1, 0 }
 };
+
 int forms_size = 5;
 Vector2* forms[5] = { L, I, Q, T, S };
 
@@ -92,15 +97,13 @@ void awake() {
 }
 
 void close() {
-	// Close SDL2_TTF
 	TTF_CloseFont(font);
 	TTF_Quit();
 }
 
 void start() {
-	font = TTF_OpenFont("assets/dogicapixel.ttf", 64);
+	font = TTF_OpenFont("dogicapixel.ttf", 64);
 
-	// player_reset();
 	for(i = 0; i < player_block_units; i++)
 		player_block[i] = L[i];
 
@@ -186,7 +189,6 @@ void update() {
 void draw(SDL_Renderer *render) {
 	SDL_RenderClear( render );
 
-	// Draw Player
 	for (i = 0; i < player_block_units; i++) {
 		r.x = (player_pos.x + player_block[i].x) * UNIT;
 		r.y = (player_pos.y + player_block[i].y) * UNIT;
@@ -197,7 +199,6 @@ void draw(SDL_Renderer *render) {
 		SDL_RenderDrawRect(render, &r);
 	}
 
-	// Draw Ground
 	for (i = 0; i < ROWS; i++) {
 		for (j = 0; j < COLS; j++) {
 			if ( ground[i][j] == false )
